@@ -1,0 +1,16 @@
+<h3>edit</h3>
+<form class="todo-edit-form" name="editForm">
+	<div class='title' ng-class="{error: editForm.title.$invalid}">
+		<input name="title" ng-model="todo.title" required />
+		<span class="error" ng-show="editForm.title.$error.required">title required!</span>
+	</div>
+
+	<div class='description' ng-class="{error: editForm.description.$invalid}">
+		<input name="description" ng-model="todo.description" required />
+		<span class="error" ng-show="editForm.description.$error.required">description required!</span>
+	</div>
+
+	<div class="actions">
+		
+	</div>
+</form>

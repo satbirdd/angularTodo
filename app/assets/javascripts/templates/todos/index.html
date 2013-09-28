@@ -1,0 +1,15 @@
+<h1>Listing todos</h1>
+
+<table ng-app="todos">
+  <tr ng-repeat="todo in todos.collection">
+    <td>{{ todo.title }}</td>
+    <td>
+      <a href="#/edit/{{ todo.id }}">edit</a>
+    </td>
+    <td>
+      <a href="#/destroy/{{ todo.id }}">destroy</a>
+    </td>
+  </tr>
+</table>
+
+<a href="#/new">add a new todo</a>
