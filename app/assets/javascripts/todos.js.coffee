@@ -21,9 +21,9 @@ todoApp.config ($routeProvider) ->
 		when("/edit/:todoId",
 			controller: "EditTodo"
 			templateUrl: "/assets/templates/todos/edit.html").
-		when("/destroy/:todoId",
-			controller: "DelTodo"
-			templateUrl: "/assets/templates/todos/destroy.html").
+		# when("/destroy/:todoId",
+		# 	controller: "DelTodo"
+		# 	template: " ").
 		when("/new",
 			controller: "AddTodo"
 			templateUrl: "/assets/templates/todos/new.html")

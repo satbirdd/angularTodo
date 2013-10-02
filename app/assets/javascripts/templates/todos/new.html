@@ -1,0 +1,17 @@
+<h3>new todo</h3>
+<form class="todo-edit-form" name="createForm">
+	<div class='title' ng-class="{error: createForm.title.$invalid}">
+		<input name="title" ng-model="todo.title" required />
+		<span class="error" ng-show="createForm.title.$error.required">title required!</span>
+	</div>
+
+	<div class='description' ng-class="{error: createForm.description.$invalid}">
+		<input name="description" ng-model="todo.description" required />
+		<span class="error" ng-show="createForm.description.$error.required">description required!</span>
+	</div>
+
+	<div class="actions">
+		<button ng-click="save()">Save</button>
+		<button ng-click="cancel()">Cancel</button>
+	</div>
+</form>
