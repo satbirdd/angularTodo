@@ -1,4 +1,13 @@
 Todos::Application.routes.draw do
+  resources :short_names
+
+
+  resources :categories
+
+
+  resources :costs
+
+
   resources :todos
 
 

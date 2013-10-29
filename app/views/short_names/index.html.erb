@@ -1,0 +1,21 @@
+<h1>Listing short_names</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @short_names.each do |short_name| %>
+  <tr>
+    <td><%= link_to 'Show', short_name %></td>
+    <td><%= link_to 'Edit', edit_short_name_path(short_name) %></td>
+    <td><%= link_to 'Destroy', short_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Short name', new_short_name_path %>
