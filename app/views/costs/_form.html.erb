@@ -12,6 +12,24 @@
   <% end %>
 
   <div class="actions">
+    <p><%= f.collection_select :category_id, Category.all, :id, :name, :prompt => 'select category' %></p>
+    <a class="enable-date-select" href="javascript: void(0);">not today?</a>
+    <div class="date" style="display: none; margin-bottom: 10px;">
+      <%= f.date_select :date, {:use_month_numbers => true}, {} %>
+    </div>
+    <p><%= f.number_field :cost_money %></p>
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  window.onload = function(){
+    var select = document.getElementsByClassName("enable-date-select")[0];
+    select.onclick = function() {
+      var date_select = document.getElementsByClassName("date")[0];
+      date_select.style.display = "block";
+
+      select.style.display = "none";
+    }
+  }
+</script>

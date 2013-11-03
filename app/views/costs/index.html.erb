@@ -9,6 +9,9 @@
 
 <% @costs.each do |cost| %>
   <tr>
+    <td><%= cost.category.name %></td>
+    <td><%= cost.cost_money %></td>
+    <td><%= cost.created_at %></td>
     <td><%= link_to 'Show', cost %></td>
     <td><%= link_to 'Edit', edit_cost_path(cost) %></td>
     <td><%= link_to 'Destroy', cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>

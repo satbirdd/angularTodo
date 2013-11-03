@@ -40,6 +40,7 @@ class CostsController < ApplicationController
   # POST /costs
   # POST /costs.json
   def create
+    debugger
     @cost = Cost.new(params[:cost])
 
     respond_to do |format|

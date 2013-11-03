@@ -7,6 +7,8 @@ class Category < ActiveRecord::Base
 
   protected
     def generate_short_names
+      # self.short_names.clear
+
       short_name = PinYin.of_string(name)
       short_name_pinyin = short_name.join('')
       self.short_names << ShortName.create(name: short_name_pinyin)
