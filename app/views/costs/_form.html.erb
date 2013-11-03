@@ -13,7 +13,7 @@
 
   <div class="actions">
     <p><%= f.collection_select :category_id, Category.all, :id, :name, :prompt => '选择花销类别' %></p>
-    <a class="enable-date-select" href="javascript: void(0);">not today?</a>
+    <a class="enable-date-select" href="javascript: void(0);">这笔花销不是今天的？s</a>
     <div class="date" style="display: none; margin-bottom: 10px;">
       <%= f.date_select :date, {:use_month_numbers => true}, {} %>
     </div>
