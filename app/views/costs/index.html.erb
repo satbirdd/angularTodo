@@ -1,10 +1,11 @@
-<h1>Listing costs</h1>
+<h1>花销列表</h1>
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>花销分类</th>
+    <th>费用</th>
+    <th>日期</th>
+    <th>操作</th>
   </tr>
 
 <% @costs.each do |cost| %>
@@ -12,9 +13,9 @@
     <td><%= cost.category.name %></td>
     <td><%= cost.cost_money %></td>
     <td><%= cost.date %></td>
-    <td><%= link_to 'Show', cost %></td>
-    <td><%= link_to 'Edit', edit_cost_path(cost) %></td>
-    <td><%= link_to 'Destroy', cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '查看', cost %></td>
+    <td><%= link_to '编辑', edit_cost_path(cost) %></td>
+    <td><%= link_to '删除', cost, method: :delete, data: { confirm: '确定删除？' } %></td>
   </tr>
 <% end %>
 </table>
