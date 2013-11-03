@@ -1,6 +1,7 @@
 class Cost < ActiveRecord::Base
-  attr_accessible :category_id, :cost_money
+  attr_accessible :category_id, :cost_money, :date
 
   belongs_to :category
-  attr_accessor :date
+
+  validates :category, :date, :presence => true
 end

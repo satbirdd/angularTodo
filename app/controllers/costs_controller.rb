@@ -40,8 +40,12 @@ class CostsController < ApplicationController
   # POST /costs
   # POST /costs.json
   def create
-    debugger
-    @cost = Cost.new(params[:cost])
+    date = Date.new(
+      params[:cost]["date(1i)"].to_i,
+      params[:cost]["date(2i)"].to_i,
+      params[:cost]["date(3i)"].to_i)
+    cost = {:category_id => params[:cost][:category_id], :cost_money => params[:cost][:cost_money], :date => date}
+    @cost = Cost.new(cost)
 
     respond_to do |format|
       if @cost.save
